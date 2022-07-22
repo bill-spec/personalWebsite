@@ -2,17 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Personal Portfolio Website</title>
-    <!-- CSS link -->
+    <title>Main</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header> 
+        <script>
+            // Use Andreas site format. 
+            // http://andreasrapp.net/
+
+            //better yet this guys
+            // https://stevelosh.com/
+
+            // Try to automate the generation of this list in the future
+            // Also can make this its own page with the dog picture in the center and a big buttom that just says
+            // "MORE DOG", which once clicked will refresh the page
+    
+            var sites = [
+                'imgs/dog/10.JPG',
+                'imgs/dog/IMG_2742.JPG'
+            ];
+            
+            function allPictures() { 
+                
+            }
+
+            function randomSite() {
+                var i = parseInt(Math.random() * sites.length);
+                location.href = sites[i];
+            }
+        </script>
+        <nav>
+                <a href = "index.html">About</a>
+                - 
+                <a href = "resume.pdf">CV</a>
+                - 
+                <a href = "#" onclick = "randomSite();">A Random Picture of my Dog</a>
+                - 
+                <a href = "projects.html">Personal Projects</a>
+                - 
+                <a href = "blog_posts.html">Writing</a>
+        </nav> 
+    </header>
+    <main>
+
+    <h1>Bill Lang</h1>
+
+    <p>
+
+        Welcome to my site.
+        <br></br>
+        <img src = "imgs/profile.jpg" alt="Personal Photo">
+        It's really for my dog but I guess my stuff is here too. 
+
+        I am currently working at the Federal Reserve Board as a research assistant. I was previosuly a student at the 
+        University of Pittsburgh where I studied economics, statistics and computer science. My personal iterests are in public polcicy, 
+        machine learning, and shoulder health (mine is bunk). In my free time I enjoy programming and watching the Starcraft GSL. 
+        <br></br>
+        The website was built and maintained by me. Recomendations on html/css/javascript are always appreciated! 
+
+    </p>
+    
+    </main>
+
+    <footer>
+        <!-- <include src="footer.html"></include> -->
+        <button class = "btn media_link_button" src = "/www.linkedin.com/in/bill-lang-8a91a6145/">LinkedIn</button>
+        <button class = "btn media_link_button" src = "https://github.com/bill-spec">Github</button>
+        <button class = "btn media_link_button">Twitter</button>
+        <button class = "btn media_link_button">Instagram</button>       
+    </footer>
+
+</body>
 
 
-<h1>Bill's Website</h1>
-<p>This is going to be my personal website from now on for projects, papers, and misc items.</p>
 
-<p>asfasfasfasf</p>
+</html>
 
 
 

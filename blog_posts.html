@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header> 
+        <script>   
+            var sites = [
+                'imgs/dog/10.JPG',
+                'imgs/dog/IMG_2742.JPG'
+            ];
+        
+            function randomSite() {
+                var i = parseInt(Math.random() * sites.length);
+                location.href = sites[i];
+            }
+        </script>
+        <nav>
+            <a href = "index.html">About</a>
+            - 
+            <a href = "resume.pdf">CV</a>
+            - 
+            <a href = "#" onclick = "randomSite();">A Random Picture of my Dog</a>
+            - 
+            <a href = "projects.html">Personal Projects</a>
+            - 
+            <a href = "blog_posts.html">Writing</a>
+        </nav> 
+    </header>
+    <main>
+
+        <h1>Writing</h1>  
+
+    </main>
+</body>
+</html>

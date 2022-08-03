@@ -88,7 +88,7 @@ main {
 
 } 
 
-main p { 
+main p.about { 
     font-family: "Times New Roman", Times, serif;
     font: "";
     position: relative; 
@@ -99,20 +99,9 @@ main p {
 
 }
 
-
 .logo { 
     cursor: pointer
 }
-
-/* .nav__links { 
-    list-style: none;
-}
-
-.nav__links li {
-    display: inline-block;
-    padding: 0px 20px;
-} */
-
 
 ul.media_links::before { 
     content : 'before';
@@ -174,65 +163,52 @@ color: white;
 }
 
 
-/* Projects Code */
-
-/* Add a gray background color with some padding */
-.body_projects {
-    font-family: Arial;
-    padding: 20px;
-    background: #f1f1f1;
+ol.index {
+    list-style-type: none;
+    padding: 0px;
+    padding-top: 40px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
 }
 
-/* Header/Blog Title */
-.header_projects {
-    padding: 30px;
-    font-size: 20px;
-    text-align: left;
-    background: white;
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
 }
 
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.maincolumn_projects {   
-    float: left;
-    width: 75%;
+ol.index li.item {
+    margin-bottom: 24px;
 }
 
-/* Right column */
-.rightcolumn_projects {
-    float: left;
-    width: 25%;
-    padding-left: 20px;
+p, ul, ol {
+    margin: 0px 0px 24px;
 }
 
-/* Fake image */
-.fakeimg_projects {
-    background-color: #aaa;
-    width: 100%;
-    padding: 20px;
+ol.index p.date {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin: 0px;
+    color: #666;
+    float: right;
 }
 
-/* Add a card effect for articles */
-.card_projects {
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 60px;
-    outline: 1px solid black;
+ol.index p.snippet {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-top: 2px;
+    font-style: italic;
 }
 
-/* Add a card effect for articles  https://www.youtube.com/watch?v=ceNMP-aQkQ4 */
-.card_projects:hover {
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 60px;
-    outline: 1px solid black;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+a {
+    color: #e50053;
+    text-decoration: none;
 }
 
 

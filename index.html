@@ -7,7 +7,7 @@
 </head>
 <body>
     <header> 
-        <script>
+            <!--
             // Use Andreas site format. 
             // http://andreasrapp.net/
 
@@ -17,19 +17,12 @@
             // Try to automate the generation of this list in the future
             // Also can make this its own page with the dog picture in the center and a big buttom that just says
             // "MORE DOG", which once clicked will refresh the page
-    
-            var sites = [
-                'imgs/dog/10.JPG',
-                'imgs/dog/IMG_2742.JPG'
-            ];
-            
-            function allPictures() { 
-                
-            }
-
+            -->
+        <script>        
             function randomSite() {
-                var i = parseInt(Math.random() * sites.length);
-                location.href = sites[i];
+                var loc = 'imgs/dog/';
+                var i = parseInt(Math.random() * (5-1+1) + 1);
+                location.href = loc.concat(i, '.JPG');
             }
         </script>
         <nav>
@@ -65,7 +58,6 @@
     </main>
 
     <footer>
-        <!-- <include src="footer.html"></include> -->
         <button class = "btn media_link_button" src = "/www.linkedin.com/in/bill-lang-8a91a6145/">LinkedIn</button>
         <button class = "btn media_link_button" src = "https://github.com/bill-spec">Github</button>
         <button class = "btn media_link_button">Twitter</button>

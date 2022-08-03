@@ -8,15 +8,11 @@
 </head>
 <body>
     <header> 
-        <script>
-            var sites = [
-                'imgs/dog/10.JPG',
-                'imgs/dog/IMG_2742.JPG'
-            ];
-        
+        <script>        
             function randomSite() {
-                var i = parseInt(Math.random() * sites.length);
-                location.href = sites[i];
+                var loc = 'imgs/dog/';
+                var i = parseInt(Math.random() * (5-1+1) + 1);
+                location.href = loc.concat(i, '.JPG');
             }
         </script>
         <nav>

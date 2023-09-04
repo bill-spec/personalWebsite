@@ -20,8 +20,9 @@
             -->
         <script>        
             function randomSite() {
+                var num_photos = 15;
                 var loc = 'imgs/dog/';
-                var i = parseInt(Math.random() * (5-1+1) + 1);
+                var i = parseInt(Math.random() * (num_photos-1+1) + 1);
                 location.href = loc.concat(i, '.JPG');
             }
         </script>

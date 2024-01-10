@@ -20,10 +20,10 @@
             -->
         <script>        
             function randomSite() {
-                var num_photos = 15;
-                var loc = 'imgs/dog/';
-                var i = parseInt(Math.random() * (num_photos-1+1) + 1);
-                location.href = loc.concat(i, '.JPG');
+                var fs = require('fs');
+                var files = fs.readdirSync('imgs/dog/');
+                var item = files[Math.floor(Math.random()*files.length)];
+                location.href = item;
             }
         </script>
         <nav>
@@ -48,9 +48,12 @@
         <br></br>
         <img src = "imgs/profile.jpg" alt="Personal Photo">
         It's really for my dog but I guess my stuff is here too. 
-
+        <br></br>
         I am currently working at the Federal Reserve Board as a research assistant. I was previosuly a student at the 
-        University of Pittsburgh where I studied economics, statistics and computer science. In my free time I am either programming, tracking my health, or watching the remains of the Starcraft GSL. 
+        University of Pittsburgh where I studied economics, statistics and computer science. In my free time I am either programming, lifting, or watching the remains of the Starcraft GSL. 
+        <br></br>
+        My research interests are focused on emperical corporate finance and household finance focused on American saving. 
+
         <br></br>
         The website was built and maintained by me. Recomendations on html/css/javascript are always appreciated! 
 
@@ -61,7 +64,9 @@
     <footer>
         <a href = "/www.linkedin.com/in/bill-lang-8a91a6145/"><button class = "btn media_link_button">LinkedIn</button></a>
         <a href = "https://github.com/bill-spec"><button class = "btn media_link_button">Github</button></a>
-        <a href = "https://twitter.com/bill_of_lefts_"><button class = "btn media_link_button">Twitter</button></a>      
+        <a href = "https://twitter.com/bill_of_lefts_"><button class = "btn media_link_button">Twitter</button></a>  
+<!--     <a href = "https://twitter.com/bill_of_lefts_"><button class = "btn media_link_button">Twitter</button></a>  -->
+
     </footer>
 
 </body>

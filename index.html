@@ -20,10 +20,9 @@
             -->
         <script>        
             function randomSite() {
-                var fs = require('fs');
-                var files = fs.readdirSync('imgs/dog/');
-                var item = files[Math.floor(Math.random()*files.length)];
-                location.href = item;
+                var loc = 'imgs/dog/';
+                var i = parseInt(Math.random() * (5-1+1) + 1);
+                location.href = loc.concat(i, '.JPG');
             }
         </script>
         <nav>
@@ -49,11 +48,14 @@
         <img src = "imgs/profile.jpg" alt="Personal Photo">
         It's really for my dog but I guess my stuff is here too. 
         <br></br>
-        I am currently working at the Federal Reserve Board as a research assistant. I was previosuly a student at the 
-        University of Pittsburgh where I studied economics, statistics and computer science. In my free time I am either programming, lifting, or watching the remains of the Starcraft GSL. 
+        I am currently working at the Federal Reserve Board as a research assistant in the Division of International Finance. I was previosuly a student at the 
+        University of Pittsburgh where I studied economics, statistics and computer science. 
         <br></br>
-        My research interests are focused on emperical corporate finance and household finance focused on American saving. 
-
+        My research interests are focused on emperical corporate finance and household finance focused on American saving. My 
+        <br></br>
+        In my free time I am either programming, lifting, or watching the remains of the Starcraft GSL. I have an autoimmune disease ankylosing spondylitis and occasionally 
+        write about how to best handle health and  
+        
         <br></br>
         The website was built and maintained by me. Recomendations on html/css/javascript are always appreciated! 
 

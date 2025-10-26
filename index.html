@@ -18,11 +18,38 @@
             // Also can make this its own page with the dog picture in the center and a big buttom that just says
             // "MORE DOG", which once clicked will refresh the page
             -->
-        <script>        
+        <script>   
+        
+            const fs = require('fs');
+            const path = require('path');
+
+            function countFilesInDirectory(directoryPath) {
+            try {
+                // Read the contents of the directory
+                const filesAndFolders = fs.readdirSync(directoryPath);
+
+                // Filter out directories and count only files
+                let fileCount = 0;
+                for (const item of filesAndFolders) {
+                const itemPath = path.join(directoryPath, item);
+                const stats = fs.statSync(itemPath); // Get file system stats
+
+                if (stats.isFile()) {
+                    fileCount++;
+                }
+                }
+                return fileCount;
+            } catch (error) {
+                console.error(`Error reading directory: ${error.message}`);
+                return -1; // Or throw the error, depending on desired error handling
+            }
+            }
+
             function randomSite() {
                 var loc = 'imgs/dog/';
-                var i = parseInt(Math.random() * (5-1+1) + 1);
-                location.href = loc.concat(i, '.JPG');
+                var dir_count = countFilesInDirectory('imgs/dog/')
+                var i = parseInt( Math.random() * (5) + 1); // parseInt always rounds toward 0 (up for negative, down for positive), Math.random() is unif[0,1], +1 because you never want zero
+                location.href = loc.concat(i, '.jpg');
             }
         </script>
         <nav>
@@ -43,24 +70,13 @@
 
     <p class = "about">
 
-        Welcome to my site.
+        Welcome to my site. It is going through some renovations. 
         <br></br>
         <img src = "imgs/profile.jpg" alt="Personal Photo">
         It's really for my dog but I guess my stuff is here too. 
         
         <br></br>
-        I am currently working at the Federal Reserve Board as a research assistant in the Division of International Finance. I was previously a student at the 
-        University of Pittsburgh where I studied economics, statistics and computer science. 
-
-        <br></br>
-        My research interests are focused on empirical corporate finance and household finance focused on American saving. 
-
-        <br></br>
-        In my free time I am either programming, lifting, or watching the remains of the Starcraft GSL. I have the autoimmune disease ankylosing spondylitis and occasionally 
-        write about my experience to best get a handle of chronic health conditions. 
-        
-        <br></br>
-        The website was built and maintained by me. Recommendations on html/css/javascript are always appreciated!
+        The website was built and maintained by me. Recommendations on html/css/javascript are always appreciated!</s>
 
     </p>
     
